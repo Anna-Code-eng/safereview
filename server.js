@@ -11,7 +11,7 @@ if (!API_KEY) console.warn('Warning: GEMINI_API_KEY is missing. Copy .env.exampl
 
 const app = express();
 app.use(express.json({ limit: '50kb' }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'docs')));
 
 // Safety net: even if the browser failed to redact, scrub known secret shapes again.
 const SECRET_PATTERNS = [
